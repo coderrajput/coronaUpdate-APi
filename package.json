@@ -12,7 +12,8 @@
   "dependencies": {
     "axios": "^0.19.2",
     "mongodb": "^3.5.5",
-    "node-html-parser": "^1.2.13"
+    "node-html-parser": "^1.2.13",
+    "nodemon": "^2.0.2"
    
   }
 }
