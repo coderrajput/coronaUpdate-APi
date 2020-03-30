@@ -1,19 +1,23 @@
 {
-  "name": "backend-code",
+  "name": "corona",
   "version": "1.0.0",
-  "description": "server-side code to expose API for real time tracking of corona virus",
+  "description": "",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "author": "coderRajput",
-  "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
     "mongodb": "^3.5.5",
+    "mongoose": "^5.9.6",
+    "morgan": "^1.10.0",
     "node-html-parser": "^1.2.13",
     "nodemon": "^2.0.2"
-   
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "author": "coderrajput",
+  "license": "ISC"
 }
