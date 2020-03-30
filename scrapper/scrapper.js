@@ -18,11 +18,13 @@ function filterArray(value,i,arr){
 }
 
 var fetchData=()=>{
+
     var body='';
 var root='';
 var rootData='';
 var filterData=[];
 var countries=[];
+save.deleteList();
     axios.get(url).then((response)=>{
    
         body=response.data;
@@ -54,7 +56,7 @@ var countries=[];
     
         
         save.saveList(countries);
-        //save.deleteList();
+        
     
     }).catch((error)=>{
         console.log(error);
