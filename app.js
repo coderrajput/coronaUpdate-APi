@@ -34,7 +34,9 @@ app.use((req, res, next) => {
 
 // Routes which should handle requests
 app.use("/countries", countryRoutes);
-
+app.get('*', function(req, res){
+   res.redirect('/countries');
+});
 
 app.use((req, res, next) => {
   const error = new Error("Not found");
