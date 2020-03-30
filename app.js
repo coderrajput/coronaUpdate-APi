@@ -6,9 +6,11 @@ const mongoose= require('mongoose');
 const scrapper= require('./scrapper/scrapper');
 
 scrapper();
+const uri = "mongodb+srv://coderrajput:coderrajput@cluster0-2r9a5.mongodb.net/test?retryWrites=true&w=majority";
 
-mongoose.connect('mongodb://localhost:27017/corona',{useNewUrlParser: true});
+// mongoose.connect('mongodb://localhost:27017/corona',{useNewUrlParser: true});
 
+mongoose.connect(uri,{useNewUrlParser: true});
 
 const countryRoutes = require("./api/routes/countrys");
 
