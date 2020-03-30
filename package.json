@@ -2,7 +2,7 @@
   "name": "backend-code",
   "version": "1.0.0",
   "description": "server-side code to expose API for real time tracking of corona virus",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
