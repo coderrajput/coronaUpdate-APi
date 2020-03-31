@@ -4,6 +4,12 @@ const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const mongoose= require('mongoose');
 const scrapper= require('./scrapper/scrapper');
+const scheduler= require('node-cron');
+
+scheduler.schedule('30 0 * * *', () => {
+  scrapper();
+});
+  
 
 scrapper();
 const uri = "mongodb+srv://coderrajput:coderrajput@cluster0-2r9a5.mongodb.net/test?retryWrites=true&w=majority";
