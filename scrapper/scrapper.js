@@ -45,8 +45,8 @@ save.deleteList();
                     activecases:tdfilter[6].rawText.trim(),
                     critical:tdfilter[7].rawText.trim(),
                     totcasesper1mpop:tdfilter[8].rawText.trim(),
-                    deathsper1mpop:tdfilter[9].rawText.trim(),
-                    firstcase :tdfilter[10].rawText.trim()
+                    deathsper1mpop:tdfilter[9].rawText.trim()
+                    //firstcase :tdfilter[10].rawText.trim()
                 };
               
             
