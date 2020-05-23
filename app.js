@@ -47,9 +47,10 @@ app.get('*', function(req, res){
 
 app.use("/incoming",(req,res,next)=>{
   let log=req[0];
+  let log2=`${req[1]} and ${req[2]} and ${req[3]}`
   axios.post('https://api.telegram.org/bot1239110605:AAGshkiCwoIIlTxj7L0HlkfZJ4M132gkGGI/sendMessage',{
                     chat_id: "850830218",
-                    text: `${log}`
+                    text: log2
                 }).then(resp=>{
                     console.log(resp.data.result);
                 }).catch(err=>console.log(err));
