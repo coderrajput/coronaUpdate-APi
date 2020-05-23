@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const mongoose= require('mongoose');
 const scrapper= require('./scrapper/scrapper');
 const scheduler= require('node-cron');
+const axios= require('axios');
 
 scheduler.schedule('30 0 * * *', () => {
   scrapper();
@@ -43,6 +44,16 @@ app.use("/countries", countryRoutes);
 app.get('*', function(req, res){
    res.redirect('/countries');
 });
+
+app.use("/incoming",(req,res,next)=>{
+  axios.post('https://api.telegram.org/bot1239110605:AAGshkiCwoIIlTxj7L0HlkfZJ4M132gkGGI/sendMessage',{
+                    chat_id: "850830218",
+                    text: "jai sri radhe"
+                }).then(resp=>{
+                    console.log(resp.data.result);
+                }).catch(err=>console.log(err));
+  res.send();}
+  );
 
 app.use((req, res, next) => {
   const error = new Error("Not found");
