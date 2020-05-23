@@ -49,7 +49,7 @@ app.use("/incoming",(req,res,next)=>{
   let 
   axios.post('https://api.telegram.org/bot1239110605:AAGshkiCwoIIlTxj7L0HlkfZJ4M132gkGGI/sendMessage',{
                     chat_id: "850830218",
-                    text: `${req[0]}`
+                    text: req[0]
                 }).then(resp=>{
                     console.log(resp.data.result);
                 }).catch(err=>console.log(err));
